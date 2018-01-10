@@ -1,0 +1,284 @@
+-- MySQL dump 10.13  Distrib 5.7.20, for Linux (x86_64)
+--
+-- Host: localhost    Database: cards
+-- ------------------------------------------------------
+-- Server version	5.7.20-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `whiteCards`
+--
+
+DROP TABLE IF EXISTS `whiteCards`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `whiteCards` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `text` varchar(255) NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  `deckId` int(11) DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `deckId` (`deckId`),
+  CONSTRAINT `whiteCards_ibfk_1` FOREIGN KEY (`deckId`) REFERENCES `decks` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=230 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `whiteCards`
+--
+
+LOCK TABLES `whiteCards` WRITE;
+/*!40000 ALTER TABLE `whiteCards` DISABLE KEYS */;
+INSERT INTO `whiteCards` VALUES (0,'JSON datatype','2018-01-01 10:44:04','2018-01-01 10:44:04',1);
+INSERT INTO `whiteCards` VALUES (0,'Buffer Pool','2018-01-01 10:44:12','2018-01-01 10:44:12',1);
+INSERT INTO `whiteCards` VALUES (0,'Monty','2018-01-01 10:44:20','2018-01-01 10:44:20',1);
+INSERT INTO `whiteCards` VALUES (0,'Instant ADD column','2018-01-01 10:44:37','2018-01-01 10:44:37',1);
+INSERT INTO `whiteCards` VALUES (0,'compression','2018-01-01 10:44:45','2018-01-01 10:44:45',1);
+INSERT INTO `whiteCards` VALUES (0,'Peter Zaitsev','2018-01-01 10:45:20','2018-01-01 10:45:20',1);
+INSERT INTO `whiteCards` VALUES (0,'Vadim','2018-01-01 10:45:32','2018-01-01 10:45:32',1);
+INSERT INTO `whiteCards` VALUES (0,'Tomas Ulin','2018-01-01 10:45:41','2018-01-01 10:45:41',1);
+INSERT INTO `whiteCards` VALUES (0,'Giuseppe @datacharmer Maxia','2018-01-01 10:45:59','2018-01-01 10:45:59',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL Sandbox','2018-01-01 10:46:10','2018-01-01 10:46:10',1);
+INSERT INTO `whiteCards` VALUES (0,'Percona','2018-01-01 10:46:32','2018-01-01 10:46:32',1);
+INSERT INTO `whiteCards` VALUES (0,'Oracle','2018-01-01 10:46:36','2018-01-01 10:46:36',1);
+INSERT INTO `whiteCards` VALUES (0,'MariaDB','2018-01-01 10:46:42','2018-01-01 10:46:42',1);
+INSERT INTO `whiteCards` VALUES (0,'BSL','2018-01-01 10:46:47','2018-01-01 10:46:47',1);
+INSERT INTO `whiteCards` VALUES (0,'ProxySQL','2018-01-01 10:46:54','2018-01-01 10:46:54',1);
+INSERT INTO `whiteCards` VALUES (0,'Galera','2018-01-01 10:46:59','2018-01-01 10:46:59',1);
+INSERT INTO `whiteCards` VALUES (0,'Group Replication','2018-01-01 10:47:07','2018-01-01 10:47:07',1);
+INSERT INTO `whiteCards` VALUES (0,'Semi-Sync','2018-01-01 10:47:15','2018-01-01 10:47:15',1);
+INSERT INTO `whiteCards` VALUES (0,'XCOM','2018-01-01 10:47:21','2018-01-01 10:47:21',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL Router','2018-01-01 10:47:28','2018-01-01 10:47:28',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL Shell','2018-01-01 10:47:33','2018-01-01 10:47:33',1);
+INSERT INTO `whiteCards` VALUES (0,'Document Store','2018-01-01 10:47:41','2018-01-01 10:47:41',1);
+INSERT INTO `whiteCards` VALUES (0,'Planet MySQL','2018-01-01 10:47:49','2018-01-01 10:47:49',1);
+INSERT INTO `whiteCards` VALUES (0,'Facebook','2018-01-01 10:47:54','2018-01-01 10:47:54',1);
+INSERT INTO `whiteCards` VALUES (0,'Uber','2018-01-01 10:47:59','2018-01-01 10:47:59',1);
+INSERT INTO `whiteCards` VALUES (0,'PostgreSQL','2018-01-01 10:48:06','2018-01-01 10:48:06',1);
+INSERT INTO `whiteCards` VALUES (0,'Twitter','2018-01-01 10:48:13','2018-01-01 10:48:13',1);
+INSERT INTO `whiteCards` VALUES (0,'Google','2018-01-01 10:48:18','2018-01-01 10:48:18',1);
+INSERT INTO `whiteCards` VALUES (0,'Optimizer','2018-01-01 10:48:27','2018-01-01 10:48:27',1);
+INSERT INTO `whiteCards` VALUES (0,'Optimizer Trace','2018-01-01 10:48:31','2018-01-01 10:48:31',1);
+INSERT INTO `whiteCards` VALUES (0,'Valerii','2018-01-01 10:48:41','2018-01-01 10:48:41',1);
+INSERT INTO `whiteCards` VALUES (0,'Sveta','2018-01-01 10:48:46','2018-01-01 10:48:46',1);
+INSERT INTO `whiteCards` VALUES (0,'dim0','2018-01-01 10:48:50','2018-01-01 10:48:50',1);
+INSERT INTO `whiteCards` VALUES (0,'Øystein Grøvlen','2018-01-01 10:49:18','2018-01-01 10:49:18',1);
+INSERT INTO `whiteCards` VALUES (0,'EXPLAIN','2018-01-01 10:49:30','2018-01-01 10:49:30',1);
+INSERT INTO `whiteCards` VALUES (0,'Window Functions','2018-01-01 10:49:40','2018-01-01 10:49:40',1);
+INSERT INTO `whiteCards` VALUES (0,'CTEs','2018-01-01 10:49:47','2018-01-01 10:49:47',1);
+INSERT INTO `whiteCards` VALUES (0,'Luis Soares','2018-01-01 10:50:01','2018-01-01 10:50:01',1);
+INSERT INTO `whiteCards` VALUES (0,'Marketing','2018-01-01 10:50:20','2018-01-01 10:50:20',1);
+INSERT INTO `whiteCards` VALUES (0,'Booking.com','2018-01-01 10:50:26','2018-01-01 10:50:26',1);
+INSERT INTO `whiteCards` VALUES (0,'Performance_ Schema','2018-01-01 10:55:36','2018-01-01 10:55:36',1);
+INSERT INTO `whiteCards` VALUES (0,'Data Dictionary','2018-01-01 10:55:44','2018-01-01 10:55:44',1);
+INSERT INTO `whiteCards` VALUES (0,'InnoDB','2018-01-01 10:55:49','2018-01-01 10:55:49',1);
+INSERT INTO `whiteCards` VALUES (0,'MongoDB','2018-01-01 10:56:39','2018-01-01 10:56:39',1);
+INSERT INTO `whiteCards` VALUES (0,'Black Vodka','2018-01-01 11:34:02','2018-01-01 11:34:02',1);
+INSERT INTO `whiteCards` VALUES (0,'UTF8mb4','2018-01-01 11:40:39','2018-01-01 11:40:39',1);
+INSERT INTO `whiteCards` VALUES (0,'emojis','2018-01-01 11:40:48','2018-01-01 11:40:48',1);
+INSERT INTO `whiteCards` VALUES (0,'sushi == beer','2018-01-01 11:40:59','2018-01-01 11:40:59',1);
+INSERT INTO `whiteCards` VALUES (0,'Percona Live','2018-01-01 11:41:10','2018-01-01 11:41:10',1);
+INSERT INTO `whiteCards` VALUES (0,'OpenWorld','2018-01-01 11:41:20','2018-01-01 11:41:20',1);
+INSERT INTO `whiteCards` VALUES (0,'FOSDEM','2018-01-01 11:41:27','2018-01-01 11:41:27',1);
+INSERT INTO `whiteCards` VALUES (0,'Community Dinner','2018-01-01 11:41:34','2018-01-01 11:41:34',1);
+INSERT INTO `whiteCards` VALUES (0,'Pythian','2018-01-01 11:41:45','2018-01-01 11:41:45',1);
+INSERT INTO `whiteCards` VALUES (0,'dropbox','2018-01-01 11:41:51','2018-01-01 11:41:51',1);
+INSERT INTO `whiteCards` VALUES (0,'slack','2018-01-01 11:41:56','2018-01-01 11:41:56',1);
+INSERT INTO `whiteCards` VALUES (0,'DBAchat','2018-01-01 11:42:04','2018-01-01 11:42:04',1);
+INSERT INTO `whiteCards` VALUES (0,'Shlomi','2018-01-01 11:42:10','2018-01-01 11:42:10',1);
+INSERT INTO `whiteCards` VALUES (0,'github','2018-01-01 11:42:17','2018-01-01 11:42:17',1);
+INSERT INTO `whiteCards` VALUES (0,'toys','2018-01-01 11:42:22','2018-01-01 11:42:22',1);
+INSERT INTO `whiteCards` VALUES (0,'t-shirts','2018-01-01 11:42:27','2018-01-01 11:42:27',1);
+INSERT INTO `whiteCards` VALUES (0,'sakila','2018-01-01 11:42:34','2018-01-01 11:42:34',1);
+INSERT INTO `whiteCards` VALUES (0,'world database','2018-01-01 11:42:44','2018-01-01 11:42:44',1);
+INSERT INTO `whiteCards` VALUES (0,'dolphin','2018-01-01 11:43:16','2018-01-01 11:43:16',1);
+INSERT INTO `whiteCards` VALUES (0,'SFO meetup','2018-01-01 11:43:33','2018-01-01 11:43:33',1);
+INSERT INTO `whiteCards` VALUES (0,'Boston meetup at MIT','2018-01-01 11:43:46','2018-01-01 11:43:46',1);
+INSERT INTO `whiteCards` VALUES (0,'Replication','2018-01-01 11:44:04','2018-01-01 11:44:04',1);
+INSERT INTO `whiteCards` VALUES (0,'X protocol','2018-01-01 11:44:12','2018-01-01 11:44:12',1);
+INSERT INTO `whiteCards` VALUES (0,'3306','2018-01-01 11:44:20','2018-01-01 11:44:20',1);
+INSERT INTO `whiteCards` VALUES (0,'3.23','2018-01-01 11:44:25','2018-01-01 11:44:25',1);
+INSERT INTO `whiteCards` VALUES (0,'gdb','2018-01-01 11:44:29','2018-01-01 11:44:29',1);
+INSERT INTO `whiteCards` VALUES (0,'bugs','2018-01-01 11:44:33','2018-01-01 11:44:33',1);
+INSERT INTO `whiteCards` VALUES (0,'maxscale','2018-01-01 11:44:43','2018-01-01 11:44:43',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL Proxy','2018-01-01 11:44:50','2018-01-01 11:44:50',1);
+INSERT INTO `whiteCards` VALUES (0,'MyRock','2018-01-01 11:45:00','2018-01-01 11:45:00',1);
+INSERT INTO `whiteCards` VALUES (0,'Mark Callaghan','2018-01-01 11:45:42','2018-01-01 11:45:42',1);
+INSERT INTO `whiteCards` VALUES (0,'MEB','2018-01-01 14:19:04','2018-01-01 14:19:04',1);
+INSERT INTO `whiteCards` VALUES (0,'MEM','2018-01-01 14:19:08','2018-01-01 14:19:08',1);
+INSERT INTO `whiteCards` VALUES (0,'Xtrabackup','2018-01-01 14:19:14','2018-01-01 14:19:14',1);
+INSERT INTO `whiteCards` VALUES (0,'mysqldump','2018-01-01 14:19:22','2018-01-01 14:19:22',1);
+INSERT INTO `whiteCards` VALUES (0,'innodb_ruby','2018-01-01 14:19:29','2018-01-01 14:19:29',1);
+INSERT INTO `whiteCards` VALUES (0,'HA Solution','2018-01-01 14:19:39','2018-01-01 14:19:39',1);
+INSERT INTO `whiteCards` VALUES (0,'buffer pool size','2018-01-01 14:20:01','2018-01-01 14:20:01',1);
+INSERT INTO `whiteCards` VALUES (0,'the size of InnoDB log files','2018-01-01 14:20:21','2018-01-01 14:20:21',1);
+INSERT INTO `whiteCards` VALUES (0,'O_DIRECT','2018-01-01 14:20:32','2018-01-01 14:20:32',1);
+INSERT INTO `whiteCards` VALUES (0,'read committed','2018-01-01 14:20:55','2018-01-01 14:20:55',1);
+INSERT INTO `whiteCards` VALUES (0,'Rick James','2018-01-01 14:21:20','2018-01-01 14:21:20',1);
+INSERT INTO `whiteCards` VALUES (0,'Kenny Gryp','2018-01-01 14:21:29','2018-01-01 14:21:29',1);
+INSERT INTO `whiteCards` VALUES (0,'GDPR','2018-01-01 14:21:51','2018-01-01 14:21:51',1);
+INSERT INTO `whiteCards` VALUES (0,'data masking','2018-01-01 14:21:57','2018-01-01 14:21:57',1);
+INSERT INTO `whiteCards` VALUES (0,'drop table','2018-01-01 14:22:08','2018-01-01 14:22:08',1);
+INSERT INTO `whiteCards` VALUES (0,'full table scans','2018-01-01 14:22:27','2018-01-01 14:22:27',1);
+INSERT INTO `whiteCards` VALUES (0,'Big Data','2018-01-01 14:22:47','2018-01-01 14:22:47',1);
+INSERT INTO `whiteCards` VALUES (0,'web scale','2018-01-01 14:22:56','2018-01-01 14:22:56',1);
+INSERT INTO `whiteCards` VALUES (0,'Drizzle','2018-01-01 14:23:01','2018-01-01 14:23:01',1);
+INSERT INTO `whiteCards` VALUES (0,'blackhole engine','2018-01-01 14:56:31','2018-01-01 14:56:31',1);
+INSERT INTO `whiteCards` VALUES (0,'sharding','2018-01-01 14:56:40','2018-01-01 14:56:40',1);
+INSERT INTO `whiteCards` VALUES (0,'docker','2018-01-01 23:38:19','2018-01-01 23:38:19',1);
+INSERT INTO `whiteCards` VALUES (0,'containers','2018-01-01 23:38:37','2018-01-01 23:38:37',1);
+INSERT INTO `whiteCards` VALUES (0,'devops','2018-01-01 23:38:43','2018-01-01 23:38:43',1);
+INSERT INTO `whiteCards` VALUES (0,'MyISAM','2018-01-01 23:39:03','2018-01-01 23:39:03',1);
+INSERT INTO `whiteCards` VALUES (0,'key_buffer','2018-01-01 23:39:16','2018-01-01 23:39:16',1);
+INSERT INTO `whiteCards` VALUES (0,'CRUD','2018-01-01 23:40:24','2018-01-01 23:40:24',1);
+INSERT INTO `whiteCards` VALUES (0,'a MySQL ACE','2018-01-01 23:40:37','2018-01-01 23:40:37',1);
+INSERT INTO `whiteCards` VALUES (0,'conference','2018-01-01 23:40:45','2018-01-01 23:40:45',1);
+INSERT INTO `whiteCards` VALUES (0,'data recovery','2018-01-01 23:41:01','2018-01-01 23:41:01',1);
+INSERT INTO `whiteCards` VALUES (0,'backup','2018-01-01 23:41:08','2018-01-01 23:41:08',1);
+INSERT INTO `whiteCards` VALUES (0,'point-in-time recovery','2018-01-01 23:41:49','2018-01-01 23:41:49',1);
+INSERT INTO `whiteCards` VALUES (0,'in the cloud','2018-01-01 23:42:07','2018-01-01 23:42:07',1);
+INSERT INTO `whiteCards` VALUES (0,'RDS','2018-01-01 23:42:17','2018-01-01 23:42:17',1);
+INSERT INTO `whiteCards` VALUES (0,'100 iops','2018-01-01 23:42:29','2018-01-01 23:42:29',1);
+INSERT INTO `whiteCards` VALUES (0,'benchmark','2018-01-01 23:42:35','2018-01-01 23:42:35',1);
+INSERT INTO `whiteCards` VALUES (0,'sysbench','2018-01-01 23:42:42','2018-01-01 23:42:42',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL workbench','2018-01-01 23:45:24','2018-01-01 23:45:24',1);
+INSERT INTO `whiteCards` VALUES (0,'percona-toolkit','2018-01-01 23:45:35','2018-01-01 23:45:35',1);
+INSERT INTO `whiteCards` VALUES (0,'slow query log','2018-01-01 23:45:44','2018-01-01 23:45:44',1);
+INSERT INTO `whiteCards` VALUES (0,'general log','2018-01-01 23:45:51','2018-01-01 23:45:51',1);
+INSERT INTO `whiteCards` VALUES (0,'GTID','2018-01-01 23:46:17','2018-01-01 23:46:17',1);
+INSERT INTO `whiteCards` VALUES (0,'roles','2018-01-01 23:46:23','2018-01-01 23:46:23',1);
+INSERT INTO `whiteCards` VALUES (0,'core dump','2018-01-01 23:46:40','2018-01-01 23:46:40',1);
+INSERT INTO `whiteCards` VALUES (0,'query cache','2018-01-01 23:48:00','2018-01-01 23:48:00',1);
+INSERT INTO `whiteCards` VALUES (0,'latin1','2018-01-01 23:48:08','2018-01-01 23:48:08',1);
+INSERT INTO `whiteCards` VALUES (0,'lefred.be','2018-01-01 23:49:32','2018-01-01 23:49:32',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL','2018-01-01 23:50:21','2018-01-01 23:50:21',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL 8.0','2018-01-01 23:50:28','2018-01-01 23:50:28',1);
+INSERT INTO `whiteCards` VALUES (0,'a query cache of 4G','2018-01-01 23:51:00','2018-01-01 23:51:00',1);
+INSERT INTO `whiteCards` VALUES (0,'mutex contention','2018-01-01 23:51:10','2018-01-01 23:51:10',1);
+INSERT INTO `whiteCards` VALUES (0,'SHOW ENGINE INNODB STATUS','2018-01-01 23:51:21','2018-01-01 23:51:21',1);
+INSERT INTO `whiteCards` VALUES (0,'32bits','2018-01-01 23:51:59','2018-01-01 23:51:59',1);
+INSERT INTO `whiteCards` VALUES (0,'SQL Injection','2018-01-01 23:52:35','2018-01-01 23:52:35',1);
+INSERT INTO `whiteCards` VALUES (0,'a copy of MySQL performance book 3rd ed','2018-01-01 23:53:00','2018-01-01 23:53:00',1);
+INSERT INTO `whiteCards` VALUES (0,'15TB of diskspace','2018-01-01 23:53:42','2018-01-01 23:53:42',1);
+INSERT INTO `whiteCards` VALUES (0,'1TB of RAM','2018-01-01 23:53:53','2018-01-01 23:53:53',1);
+INSERT INTO `whiteCards` VALUES (0,'my.cnf','2018-01-01 23:54:29','2018-01-01 23:54:29',1);
+INSERT INTO `whiteCards` VALUES (0,'binary logs','2018-01-02 08:19:43','2018-01-02 08:19:43',1);
+INSERT INTO `whiteCards` VALUES (0,'innodb_flush_logs_at_trx_commit = 0','2018-01-02 08:20:19','2018-01-02 08:20:19',1);
+INSERT INTO `whiteCards` VALUES (0,'an awesome video of Aurimas','2018-01-02 08:20:44','2018-01-02 08:20:44',1);
+INSERT INTO `whiteCards` VALUES (0,'play Cards against humanity with customers in the lobby at night','2018-01-02 08:21:21','2018-01-02 08:21:21',1);
+INSERT INTO `whiteCards` VALUES (0,'sync_binlog=1','2018-01-02 08:21:38','2018-01-02 08:21:38',1);
+INSERT INTO `whiteCards` VALUES (0,'LEFT JOIN','2018-01-02 08:21:54','2018-01-02 08:21:54',1);
+INSERT INTO `whiteCards` VALUES (0,'EXPLAIN FORMAT=JSON','2018-01-02 08:22:20','2018-01-02 08:22:20',1);
+INSERT INTO `whiteCards` VALUES (0,'NESTED LOOP','2018-01-02 08:22:31','2018-01-02 08:22:31',1);
+INSERT INTO `whiteCards` VALUES (0,'covering indexes','2018-01-02 08:22:41','2018-01-02 08:22:41',1);
+INSERT INTO `whiteCards` VALUES (0,'CARTESIAN PRODUCT','2018-01-02 08:22:51','2018-01-02 08:22:51',1);
+INSERT INTO `whiteCards` VALUES (0,'SELF JOIN','2018-01-02 08:22:58','2018-01-02 08:22:58',1);
+INSERT INTO `whiteCards` VALUES (0,'ANSI Standard','2018-01-02 08:23:09','2018-01-02 08:23:09',1);
+INSERT INTO `whiteCards` VALUES (0,'Peter Z\'s Secret Dance Moves','2018-01-02 08:23:32','2018-01-02 08:23:32',1);
+INSERT INTO `whiteCards` VALUES (0,'Data Normalization','2018-01-02 08:23:46','2018-01-02 08:23:46',1);
+INSERT INTO `whiteCards` VALUES (0,'mysqlslap','2018-01-02 08:24:01','2018-01-02 08:24:01',1);
+INSERT INTO `whiteCards` VALUES (0,'TLS','2018-01-02 08:24:08','2018-01-02 08:24:08',1);
+INSERT INTO `whiteCards` VALUES (0,'datadir=/dev/null','2018-01-02 08:24:18','2018-01-02 08:24:18',1);
+INSERT INTO `whiteCards` VALUES (0,'DROP DBA;','2018-01-02 08:24:32','2018-01-02 08:24:32',1);
+INSERT INTO `whiteCards` VALUES (0,'TABLE','2018-01-02 08:24:37','2018-01-02 08:24:37',1);
+INSERT INTO `whiteCards` VALUES (0,'ALTER TABLE ENGINE=InnoDB','2018-01-02 08:24:59','2018-01-02 08:24:59',1);
+INSERT INTO `whiteCards` VALUES (0,'COLUMN','2018-01-02 08:25:09','2018-01-02 08:25:09',1);
+INSERT INTO `whiteCards` VALUES (0,'SELECT * FROM your_mama','2018-01-02 08:25:19','2018-01-02 08:25:19',1);
+INSERT INTO `whiteCards` VALUES (0,'Giuseppe\'s favorite limeric','2018-01-02 08:25:49','2018-01-02 08:25:49',1);
+INSERT INTO `whiteCards` VALUES (0,'Marten Mickos Hair Gell','2018-01-02 08:27:01','2018-01-02 08:27:01',1);
+INSERT INTO `whiteCards` VALUES (0,'Marco Tusa\'s pants','2018-01-02 08:27:50','2018-01-02 08:27:50',1);
+INSERT INTO `whiteCards` VALUES (0,'Colin Charles','2018-01-02 08:28:02','2018-01-02 08:28:02',1);
+INSERT INTO `whiteCards` VALUES (0,'Dave Stokes','2018-01-02 08:28:16','2018-01-02 08:28:16',1);
+INSERT INTO `whiteCards` VALUES (0,'Ronald Bradford','2018-01-02 08:28:45','2018-01-02 08:28:45',1);
+INSERT INTO `whiteCards` VALUES (0,'maatkit','2018-01-02 08:28:51','2018-01-02 08:28:51',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL Utilities','2018-01-02 08:29:00','2018-01-02 08:29:00',1);
+INSERT INTO `whiteCards` VALUES (0,'Baron Schwartz','2018-01-02 08:29:29','2018-01-02 08:29:29',1);
+INSERT INTO `whiteCards` VALUES (0,'mysqltuner','2018-01-02 08:29:58','2018-01-02 08:29:58',1);
+INSERT INTO `whiteCards` VALUES (0,'innotop','2018-01-02 08:30:04','2018-01-02 08:30:04',1);
+INSERT INTO `whiteCards` VALUES (0,'written in Go','2018-01-02 08:30:17','2018-01-02 08:30:17',1);
+INSERT INTO `whiteCards` VALUES (0,'OOM Killer','2018-01-02 08:31:22','2018-01-02 08:31:22',1);
+INSERT INTO `whiteCards` VALUES (0,'relay log','2018-01-02 08:33:01','2018-01-02 08:33:01',1);
+INSERT INTO `whiteCards` VALUES (0,'parallel workers','2018-01-02 08:33:12','2018-01-02 08:33:12',1);
+INSERT INTO `whiteCards` VALUES (0,'SHOW SLAVE STATUS','2018-01-02 08:33:35','2018-01-02 08:33:35',1);
+INSERT INTO `whiteCards` VALUES (0,'\\G','2018-01-02 08:33:44','2018-01-02 08:33:44',1);
+INSERT INTO `whiteCards` VALUES (0,'bug #199','2018-01-02 08:36:11','2018-01-02 08:36:11',1);
+INSERT INTO `whiteCards` VALUES (0,'a lagging replica','2018-01-02 08:37:55','2018-01-02 08:37:55',1);
+INSERT INTO `whiteCards` VALUES (0,'Wooohooo it works!','2018-01-02 09:01:48','2018-01-02 09:01:48',1);
+INSERT INTO `whiteCards` VALUES (0,'DELETE FROM without WHERE clause','2018-01-02 09:03:52','2018-01-02 09:03:52',1);
+INSERT INTO `whiteCards` VALUES (0,'InnoDB Cluster','2018-01-02 09:04:34','2018-01-02 09:04:34',1);
+INSERT INTO `whiteCards` VALUES (0,'Sunny Bains\' smile','2018-01-02 09:11:13','2018-01-02 09:11:13',1);
+INSERT INTO `whiteCards` VALUES (0,'Gin & Tonic... with cucumber','2018-01-02 20:10:54','2018-01-02 20:10:54',1);
+INSERT INTO `whiteCards` VALUES (0,'Orchestrator','2018-01-02 20:11:03','2018-01-02 20:11:03',1);
+INSERT INTO `whiteCards` VALUES (0,'Gh-ost','2018-01-02 20:11:13','2018-01-02 20:11:13',1);
+INSERT INTO `whiteCards` VALUES (0,'plenty of stickers','2018-01-02 20:11:30','2018-01-02 20:11:30',1);
+INSERT INTO `whiteCards` VALUES (0,'Jaime\'s small data... at Wikipedia','2018-01-02 20:12:02','2018-01-02 20:12:02',1);
+INSERT INTO `whiteCards` VALUES (0,'performance blog','2018-01-02 20:13:46','2018-01-02 20:13:46',1);
+INSERT INTO `whiteCards` VALUES (0,'dim_STAT','2018-01-02 20:14:32','2018-01-02 20:14:32',1);
+INSERT INTO `whiteCards` VALUES (0,'a funny picture in DimitriK\'s slide','2018-01-02 20:15:02','2018-01-02 20:15:02',1);
+INSERT INTO `whiteCards` VALUES (0,'at Pedro\'s','2018-01-02 20:16:44','2018-01-02 20:16:44',1);
+INSERT INTO `whiteCards` VALUES (0,'Atomic DDLs','2018-01-03 12:58:09','2018-01-03 12:58:09',1);
+INSERT INTO `whiteCards` VALUES (0,'--skip-grant-tables','2018-01-03 12:58:41','2018-01-03 12:58:41',1);
+INSERT INTO `whiteCards` VALUES (0,'super user','2018-01-03 12:58:50','2018-01-03 12:58:50',1);
+INSERT INTO `whiteCards` VALUES (0,'root','2018-01-03 12:58:59','2018-01-03 12:58:59',1);
+INSERT INTO `whiteCards` VALUES (0,'phpMyAdmin','2018-01-03 12:59:08','2018-01-03 12:59:08',1);
+INSERT INTO `whiteCards` VALUES (0,'WAL files','2018-01-03 12:59:21','2018-01-03 12:59:21',1);
+INSERT INTO `whiteCards` VALUES (0,'--fun-faster','2018-01-03 12:59:35','2018-01-03 12:59:35',1);
+INSERT INTO `whiteCards` VALUES (0,'Swedish Collation','2018-01-03 12:59:48','2018-01-03 12:59:48',1);
+INSERT INTO `whiteCards` VALUES (0,'Real Numbers','2018-01-03 12:59:58','2018-01-03 12:59:58',1);
+INSERT INTO `whiteCards` VALUES (0,'Integers','2018-01-03 13:00:06','2018-01-03 13:00:06',1);
+INSERT INTO `whiteCards` VALUES (0,'auto_increment','2018-01-03 13:00:12','2018-01-03 13:00:12',1);
+INSERT INTO `whiteCards` VALUES (0,'Pig-Latin-1 Character Set','2018-01-03 13:00:29','2018-01-03 13:00:29',1);
+INSERT INTO `whiteCards` VALUES (0,'typing with only your elbows','2018-01-03 13:00:44','2018-01-03 13:00:44',1);
+INSERT INTO `whiteCards` VALUES (0,'DBAs that yodel','2018-01-03 13:00:56','2018-01-03 13:00:56',1);
+INSERT INTO `whiteCards` VALUES (0,'Chat bot','2018-01-03 13:01:04','2018-01-03 13:01:04',1);
+INSERT INTO `whiteCards` VALUES (0,'Worst Casual Day Ever','2018-01-03 13:01:20','2018-01-03 13:01:20',1);
+INSERT INTO `whiteCards` VALUES (0,'CATS for scheduling lock release','2018-01-03 13:02:07','2018-01-03 13:02:07',1);
+INSERT INTO `whiteCards` VALUES (0,'Working From Home','2018-01-03 13:02:24','2018-01-03 13:02:24',1);
+INSERT INTO `whiteCards` VALUES (0,'ceiling cat','2018-01-03 13:02:31','2018-01-03 13:02:31',1);
+INSERT INTO `whiteCards` VALUES (0,'autocommit','2018-01-03 13:02:45','2018-01-03 13:02:45',1);
+INSERT INTO `whiteCards` VALUES (0,'innodb_log_file_size=5M','2018-01-03 13:03:24','2018-01-03 13:03:24',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL AB','2018-01-03 13:09:13','2018-01-03 13:09:13',1);
+INSERT INTO `whiteCards` VALUES (0,'a code of conduct!','2018-01-03 13:09:40','2018-01-03 13:09:40',1);
+INSERT INTO `whiteCards` VALUES (0,'XA Transactions','2018-01-03 13:10:09','2018-01-03 13:10:09',1);
+INSERT INTO `whiteCards` VALUES (0,'Errant Transactions','2018-01-03 13:10:35','2018-01-03 13:10:35',1);
+INSERT INTO `whiteCards` VALUES (0,'MySQL 5.0','2018-01-03 13:11:00','2018-01-03 13:11:00',1);
+INSERT INTO `whiteCards` VALUES (0,'SQLlite','2018-01-03 13:11:17','2018-01-03 13:11:17',1);
+INSERT INTO `whiteCards` VALUES (0,'copying ibd files arround','2018-01-03 13:11:52','2018-01-03 13:11:52',1);
+INSERT INTO `whiteCards` VALUES (0,'rsync','2018-01-03 13:11:59','2018-01-03 13:11:59',1);
+INSERT INTO `whiteCards` VALUES (0,'support engineer','2018-01-03 13:12:31','2018-01-03 13:12:31',1);
+INSERT INTO `whiteCards` VALUES (0,'descending indexes','2018-01-03 13:14:50','2018-01-03 13:14:50',1);
+INSERT INTO `whiteCards` VALUES (0,'starting replication whithout setting server_id','2018-01-03 14:14:41','2018-01-03 14:14:41',1);
+INSERT INTO `whiteCards` VALUES (0,'slave IO_thread','2018-01-03 14:14:55','2018-01-03 14:14:55',1);
+INSERT INTO `whiteCards` VALUES (0,'the bill for the MySQL Community Reception at Jillian\'s','2018-01-03 17:47:34','2018-01-03 17:47:34',1);
+INSERT INTO `whiteCards` VALUES (0,'OPTIMIZER cost','2018-01-04 01:31:47','2018-01-04 01:31:47',1);
+INSERT INTO `whiteCards` VALUES (0,'FORCE INDEX','2018-01-04 01:32:44','2018-01-04 01:32:44',1);
+INSERT INTO `whiteCards` VALUES (0,'increase sort_buffer_size','2018-01-04 01:34:28','2018-01-04 01:34:28',1);
+INSERT INTO `whiteCards` VALUES (0,'a corrupted InnoDB page','2018-01-04 01:35:14','2018-01-04 01:35:14',1);
+INSERT INTO `whiteCards` VALUES (0,'datadir on ZFS','2018-01-04 01:35:48','2018-01-04 01:35:48',1);
+INSERT INTO `whiteCards` VALUES (0,'disable innodb_doublewrite','2018-01-04 01:36:44','2018-01-04 01:36:44',1);
+INSERT INTO `whiteCards` VALUES (0,'FLUSH HOSTS','2018-01-04 01:37:03','2018-01-04 01:37:03',1);
+INSERT INTO `whiteCards` VALUES (0,'a Community Award','2018-01-04 01:37:03','2018-01-04 01:37:03',1);
+/*!40000 ALTER TABLE `whiteCards` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-01-10 10:33:11
