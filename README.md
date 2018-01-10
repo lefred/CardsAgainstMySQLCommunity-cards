@@ -1,4 +1,4 @@
-== Cards Against MySQL Community
+# Cards Against MySQL Community
 
 How to dump your cards:
 
